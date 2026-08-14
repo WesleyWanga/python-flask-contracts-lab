@@ -147,3 +147,27 @@ Build the following routes:
 - Delete stale branches on GitHub.
 - Remove unnecessary or commented-out code.
 - Update `.gitignore` if needed to exclude sensitive data
+
+---
+
+## Implementation
+
+This Flask application implements two routes for managing contract and customer information.
+
+### Contract Route
+
+**GET `/contract/<id>`**
+
+The contract route searches for a contract using its ID.
+
+- **200 OK** — Returned when the contract is found, along with the contract information.
+- **404 Not Found** — Returned when the requested contract does not exist.
+
+Example:
+
+`GET /contract/1`
+
+Response:
+
+```text
+This contract is for John and building a shed
